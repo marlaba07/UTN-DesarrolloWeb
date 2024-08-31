@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="img/UTN.png" type="image/png">
 </head>
+
 <body>
-    <section class="section-home">
-        <div class="form-container">
-            <form action="" id="form-family">
-                <input type="number" placeholder="Ingresar DNI">
-                <input type="text" placeholder="Ingresar nombre">
-                <input type="number" placeholder="Ingresar apellido">
-                <input type="email" placeholder="Ingresar email">
-                <input type="number" placeholder="Ingresar telefono">
-                <input type="date">
-            </form>
-        </div>
+    <section class="form-container">
+        <h2>FORMULARIO ALUMNOS</h2>
+        <hr>
+        <form id="alumnosForm" action="">
+            <input id="nombre" type="text" placeholder="Nombre completo" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <input id="dni" type="number" placeholder="DNI" required>
+            <input id="telefono" type="number" placeholder="Telefono" required>
+            <input id="fechaNacimiento" type="date" required>
+            <button type="submit"> Enviar </button>
+
+            <div class="view-table-students">
+                <a href="#">Ver tabla alumnos</a>
+            </div>
+        </form>
     </section>
-    <script href="index.js"></script>
+
+    <script src="index.js"></script>
 </body>
+
 </html>

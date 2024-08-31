@@ -1,46 +1,72 @@
 body {
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    background: linear-gradient(70deg, blue, pink);
-    min-height: 100vh;
-    overflow-y: hidden; /* Saca el scroll vertical, sobe el eje 'x' saca el horizontal. */
-}
-
-.section-home {
-    display: flex; /* Dispone de manera flexible la clase */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100vw; /* vw (viewport height): representa el porcentaje de la altura de la ventana gráfica  */
-    height: 100vh; /* vh (viewport widht): representa el porcentaje del ancho de la ventana gráfica */
+    background: linear-gradient(to right, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
 }
 
 .form-container {
-    background-color: rgba(255, 0, 0, 0.3); /* Rojo con 30% de opacidad */
-    padding: 5vh;
-    height: 33%;
-    width: 33%;
-    border: 2px solid rgba(255, 0, 0, 0.6); /* Borde con un poco más de opacidad */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2vh 7vh 5vh 5vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
-#form-family {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
 }
 
-#form-family > input {
-    background-color: rgb(194, 177, 177);
-    width: 30vh;
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    outline: none;
     border-radius: 5px;
-    padding: 0.5em;
-    margin-top: 1.5em;
 }
 
-#form-family > input:focus {
-    border-radius: #007bff;
-    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+.form-container input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 5px #764ba2;
 }
+
+.form-container a {
+    display: block;
+    text-align: right;
+    margin: 10px 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-container button {
+    width: 34vh;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.form-container .view-table-students {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
 
 
