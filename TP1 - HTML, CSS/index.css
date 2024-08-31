@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%; 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     overflow-x: hidden; 
 }
 
@@ -76,7 +76,7 @@ html, body {
 .section {
     position: relative;
     overflow: hidden;
-    height: 91%; 
+    height: 92%; 
 }
 
 .carousel {

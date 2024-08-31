@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(70deg, blue, pink);
+    min-height: 100vh;
+    overflow-y: hidden; /* Saca el scroll vertical, sobe el eje 'x' saca el horizontal. */
+}
+
+.section-home {
+    display: flex; /* Dispone de manera flexible la clase */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100vw; /* vw (viewport height): representa el porcentaje de la altura de la ventana gráfica  */
+    height: 100vh; /* vh (viewport widht): representa el porcentaje del ancho de la ventana gráfica */
+}
+
+.form-container {
+    background-color: rgba(255, 0, 0, 0.3); /* Rojo con 30% de opacidad */
+    padding: 5vh;
+    height: 33%;
+    width: 33%;
+    border: 2px solid rgba(255, 0, 0, 0.6); /* Borde con un poco más de opacidad */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+#form-family {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-family > input {
+    background-color: rgb(194, 177, 177);
+    width: 30vh;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-top: 1.5em;
+}
+
+#form-family > input:focus {
+    border-radius: #007bff;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+}
+
+
