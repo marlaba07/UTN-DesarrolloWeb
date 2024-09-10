@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/UTN.png" type="image/png">
 </head>
 
 <body>
@@ -14,36 +15,57 @@
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <h2>FORMULARIO ALUMNOS</h2>
-                    <form id="alumnosForm">
-                        <input id="nombre" type="text" placeholder="Nombre completo" required>
+                    <form id="studentForm">
+                        <input id="name" type="text" placeholder="Nombre completo" required>
                         <input id="email" type="email" placeholder="Email" required>
-                        <input id="dni" type="number" placeholder="DNI" required>
-                        <input id="telefono" type="number" placeholder="Telefono" required>
-                        <input id="fechaNacimiento" type="date" required>
+                        <input id="dni" type="number" maxlength="8" minlength="7" placeholder="DNI" required>
+                        <input id="phone" type="number" placeholder="Telefono" required>
+                        <input id="birthdate" type="date" required>
                         <button type="submit">Enviar</button>
                     </form>
                     <div class="view-table-students">
-                        <a href="#" id="verTablaAlumnos">Ver tabla alumnos</a>
+                        <a href="#" id="viewTableStudents">Ver tabla alumnos</a>
                     </div>
                 </div>
                 <div class="flip-card-back">
                     <h2>TABLA DE ALUMNOS</h2>
-                    <table id="tablaAlumnos">
+                    <table id="tableStudents">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
                                 <th>Email</th>
                                 <th>DNI</th>
                                 <th>Teléfono</th>
-                                <th>Fecha Nacimiento</th>
+                                <th>Edad</th>
+                                <th>Materia</th>
+                                <th>Nota</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Acá se agregarán las filas de la tabla dinámicamente -->
                         </tbody>
                     </table>
-                    <div class="view-table-students">
-                        <a href="#" id="volverFormulario">Volver al formulario</a>
+                    
+                    <div class="container-table-form ">
+                        <div class="view-table-students">
+                            <a href="#" id="returnForm">Volver al formulario</a>
+                        </div>
+                        <div class="view-form-gradesSt">
+                            <a href="#" id="studentGrades">Agregar notas</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="modalForm" class="modal">
+                    <div class="modal-content">
+                        <span id="closeModal" class="close">&times;</span>
+                        <h2>FORMULARIO NOTAS</h2>
+                        <form>
+                            <input id="name" type="text" placeholder="Nombre completo" disabled>
+                            <input id="dni" type="number" placeholder="DNI" disabled>
+                            <input id="subject" type="text" placeholder="Materia" required>
+                            <input id="dni" type="number" maxlength="10" minlength="1" placeholder="DNI" required>
+                            <button type="submit">Cargar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -51,6 +73,7 @@
     </section>
 
     <script src="index.js"></script>
+    <script src="utils.js"></script>
 </body>
 
 </html>
