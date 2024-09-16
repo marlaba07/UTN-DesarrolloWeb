@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="formWrapper">
+        <h1>Ingrese alumno</h1>
+        <form id="addStudent">
+            <label for="dni">DNI</label> <br>
+            <input type="text" name="dni" id="dni" minlength="7" maxlength="8" required> <br>
+    
+            <label for="lastname">Apellido</label> <br>
+            <input type="text" name="lastname" id="lastname" required> <br>
+    
+            <label for="firstname">Nombre</label> <br>
+            <input type="text" name="firstname" id="firstname" required> <br>
+    
+            <label for="bday">Fecha de nacimiento</label> <br>
+            <input type="date" name="bday" id="bday" required> <br>
+    
+            <label for="email">Email</label> <br>
+            <input type="email" name="email" id="email" required> <br>
+    
+            <label for="celnum">Teléfono</label> <br>
+            <input type="text" name="celnum" id="celnum" required> <br>
+            
+            <button type="button" id="addNewBtn">Agregar</button>
+            <button type="reset">Limpiar</button>
+            <button type="submit" id="endBtn">Terminar</button>
+        </form>
+    </div>
+    <div class="formWrapper" hidden>
+        <h1>Ingrese notas del alumno</h1>
+        <form id="addScores">
+            <label for="dni2">DNI</label> <br>
+            <input type="text" name="dni2" id="dni2" minlength="7" maxlength="8" disabled> <br>
+    
+            <label for="lastname2">Apellido</label> <br>
+            <input type="text" name="lastname2" id="lastname2" disabled> <br>
+    
+            <label for="firstname2">Nombre</label> <br>
+            <input type="text" name="firstname2" id="firstname2" disabled> <br>
+
+            <label for="math">Matemática</label>
+            <input type="number" name="math" id="math" max="10" min="1" value="1" required> <br>
+            
+            <label for="liter">Literatura</label>
+            <input type="number" name="liter" id="liter" max="10" min="1" value="2" required> <br>
+            
+            <label for="chem">Química</label>
+            <input type="number" name="chem" id="chem" max="10" min="1" value="3" required> <br>
+            
+            <button type="button" id="nextStudent">Siguiente</button>
+            <button type="reset">Limpiar</button>
+            <button type="submit" id="endBtn2">Terminar</button>
+        </form>
+    </div>
+    <script src="part1.js"></script>
+    <script src="helper.js"></script>
+    <script src="part2.js"></script>
+</body>
+</html>

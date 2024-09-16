@@ -37,8 +37,7 @@
                                 <th>DNI</th>
                                 <th>Teléfono</th>
                                 <th>Edad</th>
-                                <th>Materia</th>
-                                <th>Nota</th>
+                                <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -60,11 +59,16 @@
                         <span id="closeModal" class="close">&times;</span>
                         <h2>FORMULARIO NOTAS</h2>
                         <form>
-                            <input id="name" type="text" placeholder="Nombre completo" disabled>
-                            <input id="dni" type="number" placeholder="DNI" disabled>
-                            <input id="subject" type="text" placeholder="Materia" required>
-                            <input id="dni" type="number" maxlength="10" minlength="1" placeholder="DNI" required>
-                            <button type="submit">Cargar</button>
+                            <div class="inline-container">
+                                <p>Seleccionar un estudiante: </p>
+                                <select id="selectNameSt"></select> 
+                            </div>
+                            <hr>
+                            <input id="name_modal" type="text" placeholder="Nombre completo" disabled>
+                            <input id="dni_modal" type="number" placeholder="DNI" disabled>
+                            <input id="subject" type="text" placeholder="Materia" disabled required>
+                            <input id="qualification" type="number" max="10" min="1" placeholder="Nota" disabled required>
+                            <button id='button_modal' type="submit" disabled>Cargar</button>
                         </form>
                     </div>
                 </div>

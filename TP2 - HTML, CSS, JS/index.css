@@ -166,3 +166,23 @@ th, td {
     text-decoration: none;
     cursor: pointer;
 }
+
+.inline-container {
+    display: flex;
+    align-items: center; 
+}
+
+.inline-container p, .inline-container select {
+    margin: 3px;
+    font-weight: bold; 
+}
+
+#buttonDetelete {
+    background-color: red;
+}
+
+#buttonViewSubject {
+    background-color: green;
+}
+
+
