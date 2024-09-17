@@ -1,17 +1,17 @@
-const body = document.querySelector('body');
+//const body = document.querySelector('body');
 
 const btnGetAllEmployees = document.getElementById('btnGetAllEmployees');
 const btnGetAllCompanies = document.getElementById('btnGetAllCompanies');
 
-const handleGetEmployees = async () => {
+const handleGetEmployees =  () => {
     const resultContainerEmployees = document.getElementById('resultEmployees');
 
     btnGetAllEmployees.disabled = true;
     resultContainerEmployees.innerHTML = 'Cargando...';
 
     getEmployees()
-        .then((employees) => {
-            resultContainerEmployees.innerHTML = `<pre>${JSON.stringify(employees, null, 2)}</pre>`;
+        .then((res) => {
+            resultContainerEmployees.innerHTML = `<pre>${JSON.stringify(res, null, 2)}</pre>`;
         })
         .catch((err) => {
             resultContainerEmployees.innerHTML = `Hubo un error al obtener los empleados: ${err.message}`;
@@ -21,13 +21,13 @@ const handleGetEmployees = async () => {
         });
 };
 
-const handleGetCompanies = async () => {
+const handleGetCompanies =  () => {
     const resultContainerCompanies = document.getElementById('resultCompanies');
 
     btnGetAllCompanies.disabled = true;
     resultContainerCompanies.innerHTML = 'Cargando...';
 
-    getEmployees()
+    getCompanies()
         .then((employees) => {
             resultContainerCompanies.innerHTML = `<pre>${JSON.stringify(employees, null, 2)}</pre>`;
         })
@@ -40,4 +40,5 @@ const handleGetCompanies = async () => {
 };
 
 btnGetAllEmployees.addEventListener('click', handleGetEmployees);
-btnGetAllCompanies.addEventListener('click', handleGetCompanies)
+btnGetAllCompanies.addEventListener('click', handleGetCompanies);
+

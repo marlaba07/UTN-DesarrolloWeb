@@ -4,7 +4,7 @@ const getEmployees = () => {
     return new Promise(function (resolve, reject) {
         const request = new XMLHttpRequest();
 
-        request.timeout = 5000;
+        // request.timeout = 5000;
         request.open('GET', url, true);
         request.onload = function () {
             if (request.status === 200) {
@@ -17,9 +17,9 @@ const getEmployees = () => {
             reject(Error('Error de red'));
         };
 
-        request.ontimeout = function () {
-            reject(Error('La solicitud ha tardado demasiado tiempo'));
-        };
+        // request.ontimeout = function () {
+        //     reject(Error('La solicitud ha tardado demasiado tiempo'));
+        // };
 
         request.send();
     })
@@ -31,7 +31,7 @@ const getCompanies = () => {
     return new Promise(function (resolve, reject) {
         const request = new XMLHttpRequest();
 
-        request.timeout = 5000;
+        // request.timeout = 5000;
         request.open('GET', url, true);
         request.onload = function () {
             if (request.status === 200) {
@@ -44,12 +44,12 @@ const getCompanies = () => {
             reject(Error('Error de red'));
         };
 
-        request.ontimeout = function () {
-            reject(Error('La solicitud ha tardado demasiado tiempo'));
-        };
+        // request.ontimeout = function () {
+        //     reject(Error('La solicitud ha tardado demasiado tiempo'));
+        // };
 
         request.send();
     })
 }
-
+ 
 
