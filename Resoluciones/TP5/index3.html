@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #222831;
+            color: lightgray
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="firstname" placeholder="Nombre">
+        <input type="text" id="lastname" placeholder="Apellido"><br>
+        <input type="email" id="email" placeholder="Email"><br>
+        <select id="companies"></select> <br>
+        <button type="button" id="addBtn">Add Employee</button>
+    </form>
+    <table id="table">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Company</td>
+                <td>Email</td>
+                <td>-</td>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script src="js/script3.js"></script>
+</body>
+</html>

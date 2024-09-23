@@ -1,4 +1,4 @@
- const url = 'https://utn-lubnan-api-1.herokuapp.com/api';
+const url = 'https://utn-lubnan-api-1.herokuapp.com/api';
  
 const GetEmployees = () => {
     const request = new XMLHttpRequest();
@@ -27,6 +27,7 @@ const AddEmployees = (employeeData) => {
                 : reject(Error('Ocurrió un error al crear un empleado. ' + request.statusText))
         }
 
+        request.onerror = () => reject(Error('Error de red'));
         request.send(JSON.stringify(employeeData));
     })
 }
@@ -41,6 +42,7 @@ const DeleteEmployee = (employeeId) => {
                 : reject(Error('No se pudo eliminar el empleado! ' + request.statusText))
         }
 
+        request.onerror = () => reject(Error('Error de red'));
         request.send();
     })
 }

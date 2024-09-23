@@ -4,7 +4,11 @@ const joinResponseHTTP = async () => {
     const employees = await getEmployees()
 
     const updatedEmployees = employees.map(emp => {
-        const company = companies.find(comp => emp.companyId === comp.companyId)
+
+        const company = companies.find(comp => {
+            emp.companyId === comp.companyId
+        })
+
         return {
             ...emp,
             companyName: company?.name || '-' 

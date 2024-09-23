@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacro Parcial Lab IV</title>
+    <link rel="icon" href="img/UTN.png" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="render-button" class="container mt-5 mb-10 p-5 rounded shadow">
+        <p>Usuarios disponibles</p>
+        <ul id="user-list"></ul>
+    </div>
+
+    <div id="render-options" class="container mt-5 mb-10 p-5 rounded shadow">
+        <ul class="nav nav-pills nav-fill" id="navTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-tab="Posts" onclick="handlerUserInfo('Posts')">Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-tab="Todos" onclick="handlerUserInfo('Todos')">Todos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-tab="Albums" onclick="handlerUserInfo('Albums')">Albums</a>
+            </li>
+        </ul>
+
+        <div id="render-posts" class="container mt-5 mb-10 p-5">
+            <ul id="post-list"></ul>
+        </div>
+    </div>
+
+    
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+    <!-- Scripts del sistema -->
+    <script src="app.js"></script>
+    <script src="constants/apiUrl.js"></script>
+
+    <!-- Services -->
+    <script src="./service/userService.js"></script>
+    <script src="./service/postService.js"></script>
+    <script src="./service/commentService.js"></script>
+    <script src="./service/albumService.js"></script>
+    <script src="./service/todoService.js"></script>
+    <script src="./service/photoService.js"></script>
+
+    <!-- Controllers -->
+    <script src="./controller/userController.js"></script>
+    <script src="./controller/postController.js"></script>
+    <script src="./controller/commentController.js"></script>
+    <script src="./controller/albumController.js"></script>
+    <script src="./controller/todoController.js"></script>
+    <script src="./controller/photoController.js"></script>
+</body>
+</html>
