@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-SERVER</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/UTN.png" type="image/png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5 mb-5">
+        <form id="formAddEmployee" class="bg-light p-4 rounded shadow">
+            <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Nombre" id="first_name" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Apellido" id="last_name" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="email" placeholder="Correo Electrónico" id="email" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="text" placeholder="Pais" id="country">
+            </div>
+
+            <button class="btn btn-success w-100" type="button" id="btnSendEmployee" onclick="sendForm()">E N V I A
+                R</button>
+        </form>
+    </div>
+    <hr>
+    <div class="container">
+        <table class="table table-dark table-striped" id="tableEmployees">
+            <thead>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Country</th>
+            </thead>
+            <!-- En el 'tbody' se crean los elementos dinamicamente en 'index.js' -->
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Scripts del proyecto -->
+    <script src="/index.js"></script>
+</body>
+
+</html>

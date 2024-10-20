@@ -1,0 +1,26 @@
+JSON SERVER
+1. Instalar Node.js → https://nodejs.org/ (todo “Siguiente” hasta finalizar)
+2. Instalar Json Server:
+    a. Abrir Terminal (macOS) o PowerShell/CMD (Windows)
+    b. Ejecutar el comando: npm install --global json-server@0.17.4
+    c. Si falla, ejecutar el comando: Set-ExecutionPolicy RemoteSigned
+3. Levantar el json-server:
+    a. Ir a la carpeta del proyecto o donde tengamos el archivo .json 
+    b. Abrir Terminal, PowerShell/CMD o la terminal de VS Code NUEVA. (en una se corre el proyecto en otra el json server)
+    c. Ejecutar: json-server --watch NombreDelArchivo.json
+
+Nota: la versión 0.17.4 es la última versión estable de json-server. Hay versiones más nuevas pero
+se encuentran aún en desarrollo.
+
+Json-server crea endpoints basado en el archivo .json que hayan indicado. 
+
+● el puerto que usa para el servidor es el 3000 → http://localhost:3000/
+● json-server asigna ids autoincrementales pero los agrega al final de cada objeto
+● usa “id” como parámetro de búsqueda en los endpoints, lo pueden configurar
+
+IMPORTANTE: tener cuidado al usar “Live Server” de VS Code junto con json-server. Al hacer un
+POST pueden provocar un loop infinito, ya que el POST modifica y guarda automáticamente el .json
+lo que hace disparar el “live reload” del Live Server.
+
+Para aprender sobre filtros, paginación, rutas y demás, tienen la documentación de json-server.
+https://github.com/typicode/json-server/tree/v0
